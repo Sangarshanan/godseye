@@ -1,3 +1,3 @@
 # Pincode Mapping:
 
-This Application can obtain the retrieve give Latitude and Longitude 
+This Application can retrieve the Pincode given Latitude and Longitude 
