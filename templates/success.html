@@ -10,34 +10,67 @@
     <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
     <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js" integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg==" crossorigin=""></script>
+
+<style>
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+</style>
+
 </head>
 
 <body>
     <div class="container-full">
         <div class="row">
             <div class="col-lg-12 text-center v-center">
-                <h1>Find your Pincode here</h1>
-                <p class="lead">Insert your lat long and get the area and pincode you fall into</p>
+                <table style="width:100%; margin:0 auto;"">
+                <tr>
+                    <td>
+                        <h3>Your Pin Code: {{ pin }}</h3>
+                    </td>
+                    <td>
+                        <h3>Your Area: {{ area }}</h3>
+                    </td>
+                </tr>
+                </table>
+                <br>
+
+                <div id="mapid" style="width: 1000px; height: 400px; margin:0 auto;"></div>
+                <br>
+                <p>Thank you for using our service!</p>
 
                 <br>
-                <br>
-                <br>
-                <form class="col-lg-12">
-                    <div class="input-group" style="width:340px;text-align:center;margin:0 auto;">
-                        <h3>Here is your Pincode and Area</h3>
-                        <table>
-                            <tr>{{ pin }}</tr>
-                        </table>
-                        <p>Thank you for using our service!</p>
-                    </div>
-                </form>
+                <input type="button" value="Back" onclick="window.history.back()" class="btn btn-lg btn-primary">
+
             </div>
 
         </div>
+    </div>
         <!-- /row -->
 
 
     <!-- script references -->
+    <script>
+	var mymap = L.map('mapid').setView([{{ lat2 }}, {{ long2 }}], 17);
+
+	L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1Ijoia2V5dXJleHQiLCJhIjoiY2pxeGxqMTBuMTZrODQ4bXV3ZXp5eXc1aCJ9.sh-L8rYkm8VMUazl2RSwkA', {
+		maxZoom: 18,
+		attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+			'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+		id: 'mapbox.streets'
+	}).addTo(mymap);
+
+	L.marker([{{ lat2 }}, {{ long2 }}]).addTo(mymap).bindPopup("<b>You are Here</b>").openPopup();
+
+</script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
     <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>

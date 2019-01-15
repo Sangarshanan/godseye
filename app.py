@@ -4,6 +4,7 @@ import geopandas as gpd
 import pandas as pd
 import numpy as np
 from scipy import spatial
+import psycopg2
 
 
 app = Flask(__name__)
@@ -57,9 +58,10 @@ def pin():
             if p.within(data['geometry'][i]) is True:
 
                 pin = int(data['pin_code'][i])
+                area = data['area_name'][i]
 
         if pin != 0:
-            return render_template('success.html', pin=pin)
+            return render_template('success.html', pin=pin,area = area, lat2=lat, long2=long)
         else:
             data1 = df1[['postalcode', 'placename', 'latitude', 'longitude ']]
             latlongs = data1.iloc[:, 2:]
@@ -68,8 +70,8 @@ def pin():
             latlongs = np.array([lat, long])
             result = tree.query(latlongs)
             pin = int(data1.iloc[[result[1]]]['postalcode'])
-
-            return render_template('success.html', pin=pin)
+            area = data1.iloc[[result[1]]]['placename']
+            return render_template('success.html', pin=pin, area = area, lat2=lat, long2=long)
 
     except (Exception, psycopg2.DatabaseError) as error:
         print(error)

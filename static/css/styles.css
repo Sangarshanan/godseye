@@ -3,7 +3,7 @@ html,body {
 }
 
 h1 {
-  font-family: Arial,sans-serif
+  font-family: Arial,sans-serif;
   font-size:80px;
   color:#DDCCEE;
 }
@@ -29,6 +29,7 @@ h1 {
 }
 
 .v-center {
-  margin-top:7%;
+  margin-top: 7%;
 }
-  
+#mapid { height: 180px; }
+
