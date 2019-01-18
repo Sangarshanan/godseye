@@ -1,3 +1,3 @@
 # Pincode Mapping:
 
-This Application can retrieve the Pincode given Latitude and Longitude 
+A Simple Flask Application that can retrieve the Pincode of a location given it's Latitude and Longitude 
