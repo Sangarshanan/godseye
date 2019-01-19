@@ -67,11 +67,19 @@ def getpincode(lat , long):
 
 ## Acknowledgments
 
-Thank you Grofers team for your constant support and motivation 
+This project as a part of our internship bootcamp project at Grofers. We would like  to thank the Grofers team for their constant support and motivation 
 
 
 ## License
 
 Check out the GNU General Public License v3.0 [LICENSE](LICENSE) file for details
+
+## Useful Links 
+
+- https://eng.uber.com/engineering-an-efficient-route/ 
+- http://map.project-osrm.org/
+- https://download.bbbike.org/
+- http://kazuar.github.io/visualize-trip-with-flask-and-mapbox/
+- https://gist.github.com/PurpleBooth/109311bb0361f32d87a2
       
 
