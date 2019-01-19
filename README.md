@@ -1,4 +1,4 @@
-# Indian Pincode Mapping:
+# Indian Pincode Mapping
 
 A Postal Index Number or PIN or PIN code is a code in the post office numbering or post code system used by India Post, the Indian postal administration. The code is six digits long.
 
