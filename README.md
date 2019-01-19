@@ -30,7 +30,7 @@ and run app.py
 ```
 python app.py
 ```
-
+The flask application now runs in your http://localhost:5000/
 
 ```python
 
