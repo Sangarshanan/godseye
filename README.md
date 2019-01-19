@@ -27,7 +27,7 @@ git clone https://github.com/Sangarshanan/Pincode-Mapping.git
 
 Run the app.py python code to 
 
-.. code-block:: python
+```python
 
     from flask import Flask
 
@@ -36,4 +36,4 @@ Run the app.py python code to
     @app.route('/')
     def hello():
         return 'Hello, World!'
-
+```
