@@ -68,6 +68,6 @@ def getpincode(lat , long):
 
 ## License
 
-Check out the [LICENSE](LICENSE) file for details
+Check out the GNU General Public License v3.0 [LICENSE](LICENSE) file for details
       
 
