@@ -69,8 +69,7 @@ def getpincode(lat , long):
 
 This project as a part of our internship bootcamp project at Grofers. We would like  to thank the Grofers team for their constant support and motivation 
 
-![img size](https://is3-ssl.mzstatic.com/image/thumb/Purple124/v4/bf/50/e3/bf50e389-fd69-8e41-6149-1831b467ec90/AppIcon-0-1x_U007emarketing-0-0-85-220-5.png/246x0w.jpg | width=100)
-
+<img src="https://camo.githubusercontent.com/..." data-canonical-src="https://is3-ssl.mzstatic.com/image/thumb/Purple124/v4/bf/50/e3/bf50e389-fd69-8e41-6149-1831b467ec90/AppIcon-0-1x_U007emarketing-0-0-85-220-5.png/246x0w.jpg" width="200" height="400" />
 
 
 ## License
