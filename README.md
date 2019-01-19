@@ -25,7 +25,12 @@ Clone the repository into your local system
 git clone https://github.com/Sangarshanan/Pincode-Mapping.git
 ```
 
-Run the app.py python code to 
+and run app.py 
+
+```
+python app.py
+```
+
 
 ```python
 
