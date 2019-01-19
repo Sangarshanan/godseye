@@ -17,4 +17,23 @@ pip install geopandas
 pip install scipy
 ```
 
+## Running the project
+
+Clone the repository into your local system
+
+```
+git clone https://github.com/Sangarshanan/Pincode-Mapping.git
+```
+
+Run the app.py python code to 
+
+.. code-block:: python
+
+    from flask import Flask
+
+    app = Flask(__name__)
+
+    @app.route('/')
+    def hello():
+        return 'Hello, World!'
 
