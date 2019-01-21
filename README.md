@@ -1,6 +1,6 @@
 # Indian Pincode Mapping
 
-A Postal Index Number or PIN or PIN code is a code in the post office numbering or post code system used by India Post, the Indian postal administration. The code is six digits long.
+A Postal Index Number or PIN or PIN code is a code in the post office numbering or post code system used by India Post, the Indian postal administration. The code is six digits long
 
 We have developed a Simple Flask Application that can retrieve the Pincode of a location given it's Latitude and Longitude 
 
