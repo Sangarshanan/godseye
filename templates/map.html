@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Pincode Mapping</title>
+    <meta name="generator" content="Bootply" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
+    <link rel="icon" type="image/png" href="grofers.png" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+   integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+   crossorigin=""/>
+
+   <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+  integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+  crossorigin=""></script>
+
+</head>
+
+<body>
+    <div class="container-full">
+
+      <h3><center> Optimal Shortest Path: {{distance}}</center> </h3>
+      <center><input type="button" value="Back" onclick="window.history.back()" class="btn btn-lg btn-primary"></center>
+
+      <br>
+      <br>
+
+      <div id="mapid" style="width:1500px; height:800px; margin:0 auto;">
+        <!-- <script>
+          var mymap = L.map('mapid').setView([37.77, -122.43], 13);
+
+          L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+          attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+          maxZoom: 18,
+          id: 'mapbox.streets',
+          accessToken: 'pk.eyJ1IjoiYW51c2h0aGEiLCJhIjoiY2pxeGx1ZGJlMWk0MTN4b2NmcnA3OHAwbiJ9.BcjJn7xzFrW1NngpwEQiKA'
+      }).addTo(mymap);
+
+      // var marker_s = L.marker([{{lat_s}}, {{long_s}}]).addTo(mymap);
+      // var marker_t = L.marker([{{lat_t}}, {{long_t}}]).addTo(mymap);
+      // var latlngs = {{location | safe}}
+      // var polyline = L.polyline(latlngs).addTo(map);
+      // zoom the map to the polyline
+      var latlngs = [
+          [45.51, -122.68],
+          [37.77, -122.43],
+          [34.04, -118.2]
+      ];
+      var polyline = L.polyline(latlngs, {color: 'red'}).addTo(map);
+      // zoom the map to the polyline
+      map.fitBounds(polyline.getBounds());
+
+          </script> -->
+           {% include "map1.html" %}
+
+      </div>
+
+
+    </div>
+        <!-- /row -->
+
+
+    <!-- /container full -->
+
+
+
+    <!-- script references -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+
+</html>
+
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+   integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+   crossorigin=""/>
+
+<script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+  integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+  crossorigin=""></script>

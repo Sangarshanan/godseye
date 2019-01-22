@@ -15,6 +15,9 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin=""/>
     <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js" integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg==" crossorigin=""></script>
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style>
 table {
   border-collapse: collapse;
@@ -27,7 +30,24 @@ table {
 </head>
 
 <body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+       <center><a class="header-item__content" href="/"><img alt="Grofers" class="logo" src="http://www.dealnloot.com/wp-content/uploads/2017/07/grofers-logo.png" style="width: 20%; height: 20%;"></a></center>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="{{ url_for('index') }}">Pincode Mapping</a></li>
+      <li ><a href="{{ url_for('index_r') }}">Routing - Bangalore</a></li>
+      <li ><a href="{{ url_for('index_rd') }}">Routing - Delhi</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+
+
     <div class="container-full">
+        <br> <br><br> 
         <div class="row">
             <div class="col-lg-12 text-center v-center">
                 <table style="width:100%; margin:0 auto;"">
