@@ -39,7 +39,21 @@ The flask application now runs in your localhost:5000
 
 ## How it works ?
 
-We are using a combination of two different algorithms 
+For calculating the path between two given latlong we make use of the Open Street Data available online and Postgres extensions such as Postgis and  PGrouting 
+
+**PGrouting:** pgRouting extends the PostGIS / PostgreSQL geospatial database to provide geospatial routing functionality.
+
+- We can visualize the road dataset as a graph model (Combination of Nodes and Edges)
+- To do this we can use **osm2pgrouting** to get tables corresponding to the nodes and edges 
+- These tables can be loaded into the Postgres database  
+- For the given source and destination latlong find the nearest Node in the given dataset. This gives us two nodes  
+- Use those nodes to determine the Path between them using any path finding algorithm (Dijkstra's algorithm)
+- Adding weight to the edges of the graph can help us calculate the ETA and the distance between the points
+
+As we are considering routing citywise we cannot route for inter-city travel but the sharding approach and partitioning  the databse for major cities can help with load balancing 
+
+
+For the pincode mapping we are using a combination of two different algorithms 
 
 + The First algorithm used to shapfiles of cities by dividing them into polygons where each polygon represents a pincode 
 + The Second algorithm uses Kdtrees to map a given latlong to the nearest latlong with a known pincode 
@@ -68,6 +82,7 @@ def getpincode(lat , long):
 
 ```
 
+
 ## Acknowledgments
 
 This project was done as an internship bootcamp project at Grofers <a href="https://grofers.com">
@@ -81,11 +96,10 @@ Check out the GNU General Public License v3.0 [LICENSE](LICENSE) file for detail
 
 ## Useful Links 
 
-
+- https://pgrouting.org/
 - https://eng.uber.com/engineering-an-efficient-route/ 
 - http://map.project-osrm.org/
 - https://download.bbbike.org/
 - http://kazuar.github.io/visualize-trip-with-flask-and-mapbox/
-- https://gist.github.com/PurpleBooth/109311bb0361f32d87a2
       
 
