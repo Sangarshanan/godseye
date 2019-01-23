@@ -47,6 +47,14 @@ For calculating the path between two given latlong we make use of the Open Stree
 - To do this we can use **osm2pgrouting** to get tables corresponding to the nodes and edges 
 - These tables can be loaded into the Postgres database  
 - For the given source and destination latlong find the nearest Node in the given dataset. This gives us two nodes  
+
+```python
+s_query = "SELECT source FROM ways WHERE source_osm in (SELECT osm_id FROM ways_vertices_pgr ORDER BY the_geom <-> ST_GeometryFromText('{}',4326) LIMIT 1) LIMIT 1".format(s_geom)
+source = doQuery( myConnection, s_query )
+t_query =  "SELECT target FROM ways WHERE target_osm in (SELECT osm_id FROM ways_vertices_pgr ORDER BY the_geom <-> ST_GeometryFromText('{}',4326) LIMIT 1) LIMIT 1 ".format(t_geom)
+target = doQuery( myConnection, t_query )
+```
+
 - Use those nodes to determine the Path between them using any path finding algorithm (Dijkstra's algorithm)
 - Adding weight to the edges of the graph can help us calculate the ETA and the distance between the points
 
