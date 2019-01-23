@@ -56,6 +56,12 @@ target = doQuery( myConnection, t_query )
 ```
 
 - Use those nodes to determine the Path between them using any path finding algorithm (Dijkstra's algorithm)
+
+```python
+
+dist_query = "SELECT * INTO DD FROM pgr_dijkstra('SELECT gid AS id, source, target, length AS cost FROM ways',{}, {},directed := false)".format(source[0][0], target[0][0])
+doQueryv2( myConnection, dist_query )
+```
 - Adding weight to the edges of the graph can help us calculate the ETA and the distance between the points
 
 As we are considering routing citywise we cannot route for inter-city travel but the sharding approach and partitioning  the databse for major cities can help with load balancing 
