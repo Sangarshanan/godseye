@@ -1,8 +1,11 @@
-# Indian Pincode Mapping:
+# Indian Road Routing and Pincode Mapping using LatLongs:
+
+- Extrapolating the Pincode given the Latitude and Longitude 
+- Figuring out the path by road between two LatLongs 
 
 A Postal Index Number or PIN or PIN code is a code in the post office numbering or post code system used by India Post, the Indian postal administration. The code is six digits long
 
-We have developed a Simple Flask Application that can retrieve the Pincode of a location given it's Latitude and Longitude 
+We have developed a Simple Flask Application that can retrieve the path by road between two given Latlongs and also retrieve the Pincode of a location given it's Latitude and Longitude 
 
 ## Getting Started
 
