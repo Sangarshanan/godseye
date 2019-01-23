@@ -99,8 +99,10 @@ def getpincode(lat , long):
 
 ## Acknowledgments
 
-This project was done as an internship bootcamp project at Grofers <a href="https://grofers.com">
+This work was presented as an internship bootcamp project at Grofers <a href="https://grofers.com">
  <img src="https://is3-ssl.mzstatic.com/image/thumb/Purple124/v4/bf/50/e3/bf50e389-fd69-8e41-6149-1831b467ec90/AppIcon-0-1x_U007emarketing-0-0-85-220-5.png/246x0w.jpg" data-canonical-src="https://is3-ssl.mzstatic.com/image/thumb/Purple124/v4/bf/50/e3/bf50e389-fd69-8e41-6149-1831b467ec90/AppIcon-0-1x_U007emarketing-0-0-85-220-5.png/246x0w.jpg" width="13" height="13" /> </a>
+ 
+** Presentation** https://bit.ly/2MrgK18
 
 
 
