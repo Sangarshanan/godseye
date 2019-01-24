@@ -1,6 +1,5 @@
 # Indian Road Routing and Pincode Mapping using LatLongs:
 
-LiveSite: http://34.219.235.63/
 
 - Extrapolating the Pincode given the Latitude and Longitude 
 - Figuring out the path by road between two LatLongs 
@@ -12,6 +11,9 @@ We have developed a Simple Flask Application that can retrieve the path by road 
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+
+Or you can chceck out the LiveSite: http://34.219.235.63/
+
 
 ### Prerequisites
 
