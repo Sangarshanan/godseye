@@ -106,10 +106,10 @@ This work was presented as an internship bootcamp project at Grofers <a href="ht
 
 ## Team 
 
-[Aditya Pankaj Shaha](https://github.com/AdityaShaha)
-[Anushtha Kalia](https://github.com/anushthakalia)
-[Kariya Keyur Rajeshbhai](https://github.com/keyur007)
-[Sangarshanan](https://github.com/Sangarshanan)
+- [Aditya Pankaj Shaha](https://github.com/AdityaShaha)
+- [Anushtha Kalia](https://github.com/anushthakalia)
+- [Kariya Keyur Rajeshbhai](https://github.com/keyur007)
+- [Sangarshanan](https://github.com/Sangarshanan)
 
 
 ## License
