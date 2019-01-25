@@ -128,3 +128,4 @@ Check out the GNU General Public License v3.0 [LICENSE](LICENSE) file for detail
 - http://kazuar.github.io/visualize-trip-with-flask-and-mapbox/
       
 
+**Full Disclosure** The Name for the project was inspired from the Tv show [Person of Interest](https://www.imdb.com/title/tt1839578/)
