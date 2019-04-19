@@ -1,5 +1,6 @@
 # Indian Road Routing and Pincode Mapping using LatLongs:
 
+Hakcernoon Article: https://hackernoon.com/building-a-pincode-mapper-and-routing-engine-with-postgis-and-pgrouting-79bba806a842
 
 - Extrapolating the Pincode given the Latitude and Longitude 
 - Figuring out the path by road between two LatLongs 
