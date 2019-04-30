@@ -1,4 +1,4 @@
-# Indian Road Routing and Pincode Mapping using LatLongs:
+## Indian Road Routing and Pincode Mapping using Coordinates
 
 Hakcernoon Article: https://hackernoon.com/building-a-pincode-mapper-and-routing-engine-with-postgis-and-pgrouting-79bba806a842
 
@@ -127,4 +127,4 @@ Check out the GNU General Public License v3.0 [LICENSE](LICENSE) file for detail
 - http://kazuar.github.io/visualize-trip-with-flask-and-mapbox/
       
 
-**Full Disclosure** The Name for the project was inspired from the Tv show [Person of Interest](https://www.imdb.com/title/tt1839578/)
+The Name for the project was inspired from the Tv show [Person of Interest](https://www.imdb.com/title/tt1839578/)
